@@ -1,0 +1,69 @@
+// #222831
+// #393E46
+// #948979
+// #DFD0B8
+// Variables en sass
+
+$bg-primary: #222831;
+$bg-secondary: #393E46;
+$text-primary: #948979;
+$text-secondary: #DFD0B8;
+$margen-chico: 8px;
+$margen-grande: 16px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    background-color: $bg-primary;
+    h2 {
+        color: $text-primary;
+    }
+    &:hover {
+        color: green;
+    }
+}
+
+.title {
+    color: green;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    .card {
+        width: 200px;
+        height: 200px;
+        color: $text-secondary;
+        background-color: $bg-primary;
+    }
+    .card-distinta {
+        @extend .card;
+        background-color: $bg-secondary;
+        padding: 20px;
+    }
+}
+
+.button {
+    border:none;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+.container-buttons {
+    button {
+        @extend .button;
+        background-color: red;
+    }
+}
+
+// mixin 
